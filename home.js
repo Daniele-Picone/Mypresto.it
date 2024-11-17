@@ -36,60 +36,80 @@ aggiornaOra();
 setInterval(aggiornaOra, 1000);
 
 
-let wrapperReviuw = document.querySelector('#wrappeReviuw')
-let currentIndex = recensioni
 
 
 
-
+let wrapperReviuw = document.querySelector('.swiper-wrapper')
 
 recensioni.forEach((recensione ) => {
     let div = document.createElement('div')
-    div.classList.add('card-reviuw')
+    div.classList.add('swiper-slide')
     div.innerHTML = `
     
-    <div class="swiper-slide card-reviuw " data-swiper-autoplay="2000" >
-    <p > ${recensione.nome}</p>
-    <p > ${recensione.descrizione}</p>
-    <div class="d-flex justify-content-center star">
+   
+      <div class="card-reviuw">
+        <p > ${recensione.nome}</p>
+        <p > ${recensione.descrizione}</p>
+       <div class="d-flex justify-content-center star">
     
-    </div>
-    </div>
+       </div>
+       </div>
+    
     
     
     
     `
-    
- wrapperReviuw.innerHTML='' 
+
+// wrapperReviuw.innerHTML= '';
  wrapperReviuw.appendChild(div)
-  
- 
-})
+//  console.log(recensione);
+});
 
 
 
-    
 let stars = document.querySelectorAll('.star')
-    
-    stars.forEach((star , index ) => {
-        for (let i = 0; i <= recensioni[index].rank ; i++ ) {
-            let icon = document.createElement('i')
-            icon.classList.add('fa-solid', 'fa-star')
-            
-            star.appendChild(icon)
-            
-        }
+
+stars.forEach((star , index ) => {
+    for (let i = 1; i <= recensioni[index].rank ; i++ ) {
+        let icon = document.createElement('i')
+        icon.classList.add('fa-solid', 'fa-star')
         
+        star.appendChild(icon)
         
-    });
+    }
+    let differnce = 5 - recensioni[index].rank ;
+    for (let i = 1; i <= differnce ; i++ ) {
+        let icon = document.createElement('i')
+        icon.classList.add('fa-regular', 'fa-star')
+        
+        star.appendChild(icon)
+        
+    }
     
-    var swiper = new Swiper(".mySwiper", {
-        effect: "flip",
-        grabCursor: true,
-        pagination: {
-          el: ".swiper-pagination",
-        }
-       
-      });
+});
     
-      
+
+const swiper = new Swiper('.swiper', {
+    // Optional parameters
+    spaceBetween: 30,
+    centeredSlides: true,
+    loop: true,
+    autoplay: {
+      delay: 2500,
+      disableOnInteraction: false,
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+   
+    
+  });
+    
+
+
+   

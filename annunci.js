@@ -32,8 +32,10 @@ function aggiornaOra() {
 
 
   menuBtn.addEventListener('click', ()=> { 
-        sidebar.classList.toggle('nodisplay')
+       
+            sidebar.classList.toggle('nodisplay')
         cardWrapper.style.width = '100%'
+        
         
   })
 
@@ -175,15 +177,6 @@ console.dir(addMarket[0])
        carrello.dataset.count = currentCount
        button.innerText = 'rimuvi dal carrello'
       
-
-    
-      
-       
-     
-       
-       
-        
-       
     
     })
    })

@@ -167,6 +167,7 @@ header{
     justify-content: space-between;
     align-items: center;
     height: 400px;
+   
 }
 .section-article h2{
     text-align: center;
@@ -236,30 +237,37 @@ border-right: 1px solid var(--white);
     transform: scale(1.1);
 
 }
-.reviuws{
+.recensioni{
     width: 50%;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center
+   align-items: center;
+   justify-content: center;
+   flex-direction: column;
 }
+.swiper{
+    width: 50%;
+}
+
 .reviuws h4{
     color: var(--smoke-white);
     text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    
 }
 .card-reviuw{
     height: 130px;
-    width: 270px;
+    width: 240px;
     border: 2px solid var(--smoke-white);
     border-radius: 15px;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
+   box-shadow: 2px 2px 5px var(--smoke-white) , -2px -2px 5px var(--smoke-white)  ;
+   padding: 4px 15px;
+}
+
+.recensioni h4{
+    color: var(--smoke-white);
 }
 .card-reviuw p{
 
@@ -297,7 +305,7 @@ footer h4, li{
     height: 100vh;
     width: 300px;
     background-color: var(--green);
-    position: relative;
+    position: relative ;
     transition: 1s;
     border-radius: 15px;
     display: flex;
@@ -305,6 +313,7 @@ footer h4, li{
     align-items: center;
     justify-content: space-around;
     margin-left: 4px;
+    margin-top: 20px;
     border: 2px solid black;
 
     
@@ -331,11 +340,10 @@ footer h4, li{
 #wordInput{
     border-radius: 14px;
 }
+
 .card-wrapper{
     height: 100vh;
     width: 80%;
-}
-.card-wrapper{
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -346,6 +354,7 @@ footer h4, li{
    height: 300px;
    width: 250px;
    border: 4px solid var(--green);
+   text-align: center;
    border-radius: 14px ;
    display: flex;
    flex-direction: column;
@@ -401,11 +410,405 @@ top: -15px;
 
 
 
-
 /* chi siamo  */
+.profilo-annunci {
+    color: var(--green);
+}
+.annunci_header{
+    margin-top: 90px;
+}
+.chi_siamo{ 
+    position: relative;
+   bottom: -40px;
+    margin-top: 30px;
+    transform: rotate(20deg);
+}
+.chi_siamo h1{
+    text-transform: uppercase;
+    font-weight: bold;
+   
+}
 
-.chi-sono img {
+.chi-sono{
+    margin-top: 80px;
+    border-bottom: 2px solid var(--black) ;
+    margin-bottom: 20px;
+   
+    border-radius: 15px;
+}
+.description img {
     width: 200px;
     height: 200px;
+    
+}
+.description_wrapper{
+display: flex;
+height: auto;
+justify-content: space-around;
+align-items: center;
+gap: 30px;
+transition: 0.5s;
+
+}
+.description{
+   display: flex;
+   justify-content: start;
+   align-items: start;
+   flex-direction: column;
+   gap: 15px;
+   padding: 30px;
+   border-left: 2px solid var(--yellow);
+   border-bottom: 2px solid var(--green);
+   border-radius: 14px;
+}
+.description h3, h4{
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.description p{
+    width: 50%;
+}
+.persona{
+    text-align: start;
+    height: auto;
+    width: 40%;
+}
+.il_nostro_staff{
+    display: flex;
+    height: auto;
+    width: 30%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    padding: 5px;;
+    border-right: 2px solid var(--green) ;
+    border-top: 2px solid  var(--yellow) ;
+    border-radius: 14px;
+}
+.staffs_section{
+    display: flex;
+    height: auto;
+     justify-content: center;
+    text-align: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+.staff{
+    display: flex;
+    height: 160px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    cursor: pointer;
+   
+}
+.staff img{
+    margin-left: 15px;
+    height: 80px;
+    width: 80px;
     border-radius: 50%;
+   
+    
+}
+.staff p{
+    text-transform: uppercase;
+    flex-wrap: wrap;
+    font-weight: bold;
+   
+}
+.mission{
+    height: 400px;
+    width: 101%;
+    margin-bottom: 30px;
+    margin-top: 70px;
+    border-left: 2px solid var(--green);
+    border-bottom: 2px solid var(--yellow);
+   
+    border-radius: 14px;
+
+}
+
+.mission_description{
+    padding: 30px;
+    margin-bottom: 20px;
+    border-radius: 14px;
+}
+.mission_img img{
+    height: 190px;
+    width: 170px;
+    border-radius: 50%;
+    margin-left: 160px;
+    margin-bottom: 20px;
+}
+
+
+
+@media screen and ( max-width: 700px) {
+    .logo{
+        display: flex;
+        justify-content: center;
+       width: 99%;
+       gap: 15px;
+        
+    }
+    .logo a{
+        font-size: 10px;
+        
+    }
+    .logo h1{
+        font-size: 14px;
+    }
+    nav{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 99%;
+        gap: 35px;
+        
+    }
+    .profilo{
+        width: 5%;
+        margin-left: -10px;
+    }
+    .profilo i {
+        font-size: 10px;
+       
+    }
+    .profilo p{
+        display: none;
+    }
+    .links{
+        font-size: 10px;
+       
+    }
+    .ora{
+        font-size: 10px;
+        margin-left: -40px;
+       
+    }
+    .ora i{
+        font-size: 10px;
+
+    }
+    .categories{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+ header{
+    width: 95%;
+    margin-left: -10px;
+ }
+    .blackfriday{
+        width: 100%;
+    }
+    .blackfriday h4{
+        font-size: 16px;
+    }
+    
+    .section-article{
+        width: 99%;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+    .article{
+        width: 35%;
+    }
+    .article h4{
+        font-size: 12px;
+    }
+
+    .sidebar{
+        display: flex;
+        width: 80%;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        align-items: center;
+        flex-direction: column;
+        margin-top: 100px;
+        margin-left: -10px;
+        height: 60vh;
+        position: absolute;
+        
+    }
+    .nodisplay{
+        display: none;
+    }
+    #radioWrapper{
+        font-size: 10px;
+        height: 200px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: start;
+        flex-direction: column;
+         gap: 4px;
+    }
+
+    .riserch{
+        display: flex;
+        height: 100%;
+        justify-content: space-evenly;
+        align-items: start;
+        flex-direction: column;
+        
+    }
+    #wordInput{
+        border-radius: 14px;
+    }
+    
+
+    .sidebar p ,h4{
+        font-size: 10px;
+    }
+    
+    .card-wrapper{
+        width: 70%;
+    }
+    
+    .cards{ 
+        height: 220px;
+        width: 150px;
+       
+        font-size: 15px;
+     }
+     .cards button{
+        background-color: var(--yellow);
+        font-size: 10px;
+        border: 2px solid var(--green);
+        border-radius: 14px;
+    }
+     .cards h4{
+        font-size: 13px;
+     }
+     .cards img{
+        width: 140px;
+     } 
+     .indirizzi, .contatti{
+        padding: 5PX;
+     }
+     
+     .socials_container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 240px;
+        height: 300px;
+       
+      
+     }
+     .socials{
+        display: flex;
+        flex-direction: column;
+        width: 100%; 
+        position: relative;
+        top: -10px;
+     }
+     .social{
+      width: 100%;
+      margin-left: -5px;
+     }
+     .social i{
+        font-size: 17px;
+     }
+     .recensioni{
+        background-color:  black;
+        border: 2px solid var(--green);
+        border-radius: 14px;
+        position: absolute;
+        bottom: -220px;
+        width: 100%;
+       
+     }
+     .card-reviuw{
+        height: 100%;
+        width: 100%;
+        padding: 10px;
+     }
+     .card-reviuw p , i {
+        font-size: 15px;
+     }
+     footer{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 130px;
+        margin-top: 180px;
+     }
+     footer h4{
+        font-size: 14px;
+     }
+     footer li{
+        font-size: 10px;
+     }
+     .chi-sono{
+        margin-left: 10px;
+        border-top: 2px solid var(--black);
+        margin-bottom: ;
+        
+     }
+     .il_nostro_staff{
+         margin-top: 5px;
+         width: 100%;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         flex-direction: column;
+        margin-bottom: 20px;
+        margin-left: 10px;
+         
+        }
+        .staff{
+           display: flex;
+           height: 50px;
+           align-items: center;
+           justify-content: center;
+           flex-direction: column;
+           cursor: pointer;
+          
+       }
+       .staff img{
+           height: 40px;
+           width: 40px;
+           border-radius: 50%;
+          
+           
+       }
+       .staff p{
+           text-transform: uppercase;
+          
+           font-weight: bold;
+          
+       }
+     
+     .description img {
+        width: 100px;
+        height: 100px;
+        
+    }
+    .description_wrapper{
+    display: flex;
+     width: 50%;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+    
+    }
+    .mission{
+        margin-left: 20px;
+    }
+    .mission_description h4{
+        font-size: 18px;
+    }
+    .mission_img img{
+        height: 90px;
+        width: 150px;
+        border-radius: 0px;
+        margin-left: 160px;
+        margin-bottom: 20px;
+    }
+    
 }
